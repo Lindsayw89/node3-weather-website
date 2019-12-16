@@ -13,7 +13,7 @@ request({url, json: true}, (error, {body})=>{
         callback('invalid location', undefined)
     } else {
         callback(undefined, 
-            body.daily.data[0].summary + ' it is currently ' + body.currently.temperature + ' degrees and there is a ' + body.currently.precipProbability + '% chance of rain.')
+            body.daily.data[0].summary + ' it is currently ' + body.currently.temperature + ' degrees and there is a ' + body.currently.precipProbability + '% chance of rain. The sun will set at ' + body.daily.data[0].sunsetTime)
     }
   })
 }
